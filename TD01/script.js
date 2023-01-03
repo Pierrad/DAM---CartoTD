@@ -30,3 +30,29 @@ if ('geolocation' in navigator) {
 } else {
   window.alert('Geolocation is not available');
 }
+
+if (window.DeviceOrientationEvent) {
+  window.addEventListener('deviceorientation', (event) => {
+    const { alpha, beta, gamma } = event;
+    const alphaEl = document.getElementById('alpha');
+    const betaEl = document.getElementById('beta');
+    const gammaEl = document.getElementById('gamma');
+
+    alphaEl.innerHTML = `Alpha: ${alpha} °`;
+    betaEl.innerHTML = `Beta: ${beta} °`;
+    gammaEl.innerHTML = `Gamma: ${gamma} °`;
+  });
+}
+
+if (window.DeviceMotionEvent) {
+  window.addEventListener('devicemotion', (event) => {
+    const { acceleration, accelerationIncludingGravity, rotationRate, interval } = event;
+    const accelerationEl = document.getElementById('acceleration');
+    const accelerationIncludingGravityEl = document.getElementById('accelerationIncludingGravity');
+    const rotationRateEl = document.getElementById('rotationRate');
+
+    accelerationEl.innerHTML = `Acceleration: ${acceleration.x} m/s², ${acceleration.y} m/s², ${acceleration.z} m/s²`;
+    accelerationIncludingGravityEl.innerHTML = `Acceleration including gravity: ${accelerationIncludingGravity.x} m/s², ${accelerationIncludingGravity.y} m/s², ${accelerationIncludingGravity.z} m/s²`;
+    rotationRateEl.innerHTML = `Rotation rate: ${rotationRate.alpha} °/s, ${rotationRate.beta} °/s, ${rotationRate.gamma} °/s`;
+  });
+}

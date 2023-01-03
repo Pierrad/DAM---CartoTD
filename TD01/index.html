@@ -4,6 +4,7 @@
 <head>
   <title>GeoCarto - TO01</title>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="LP DAM - GeoCarto - TD01" />
   <meta name="author" content="VASSEUR Pierre-Adrien" />
 </head>
@@ -11,28 +12,39 @@
 <body>
   <h1>TD01</h1>
 
+  <h2>Exercice 1</h2>
+
   <div>
-    <h2>Avec <code>getCurrentPosition()</code></h2>
+    <h3>Avec <code>getCurrentPosition()</code></h3>
 
     <p id="position1"></p>
-
     <p id="precision1"></p>
-
     <p id="speed1"></p>
-
     <p id="date1"></p>
 
+    <h3>Avec <code>watchPosition()</code></h3>
+    
+    <p id="position2"></p>
+    <p id="precision2"></p>
+    <p id="speed2"></p>
+    <p id="date2"></p>
   </div>
 
+  <h2>Exercice 2</h2>
+
   <div>
-    <h2>Avec <code>watchPosition()</code></h2>
-    <p id="position2"></p>
+    <h3><code>deviceOrientation</code></h3>
 
-    <p id="precision2"></p>
+    <p id="alpha"></p>
+    <p id="beta"></p>
+    <p id="gamma"></p>
 
-    <p id="speed2"></p>
+    <h3><code>deviceMotion</code></h3>
 
-    <p id="date2"></p>
+    <p id="acceleration"></p>
+    <p id="accelerationIncludingGravity"></p>
+    <p id="rotationRate"></p>
+
   </div>
 
   <script src="./script.js"></script>
