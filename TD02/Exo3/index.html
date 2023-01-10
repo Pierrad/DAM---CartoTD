@@ -27,15 +27,27 @@
 
   <h2>Trajet d'un point A vers un point B avec MapBox</h2>
 
-  <form id="coordinates">
+  <form id="coordinatesMapBox">
     <label for="start">Point de départ</label>
-    <input type="text" id="start" name="start" placeholder="Ex: 7.266,43.703" value="7.27178,43.6961" required>
+    <input type="text" id="startPoint" name="start" placeholder="Ex: 7.266,43.703" value="7.27178,43.6961" required>
     <label for="end">Point d'arrivée</label>
-    <input type="text" id="end" name="end" placeholder="Ex: 7.266,43.703" value="5.36978,43.296482" required>
+    <input type="text" id="endPoint" name="end" placeholder="Ex: 7.266,43.703" value="5.36978,43.296482" required>
     <input type="submit" value="Afficher">
   </form>
 
-  <div id="pathMap" style="height: 500px; margin: 20px 0 20px 0;"></div>
+  <div id="pathMapBox" style="height: 500px; margin: 20px 0 20px 0;"></div>
+
+  <h2>Trajet d'une adresse A vers une adresse B avec MapQuest</h2>
+
+  <form id="coordinatesMapQuest">
+    <label for="start">Adresse de départ</label>
+    <input type="text" id="startAddress" name="start" placeholder="4 rue de la liberté, 06000 Nice" value="4 rue de la liberté, 06000 Nice" required>
+    <label for="end">Adresse d'arrivée</label>
+    <input type="text" id="endAddress" name="end" placeholder="Quai du Port, 13002 Marseille" value="Quai du Port, 13002 Marseille" required>
+    <input type="submit" value="Afficher">
+  </form>
+
+  <div id="pathMapQuest" style="height: 500px; margin: 20px 0 20px 0;"></div>
 
   <script src="./index.js"></script>
 </body>
