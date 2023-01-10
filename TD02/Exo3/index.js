@@ -1,9 +1,13 @@
+//
+// Données GeoJSON des musées de France
+//
+
 const map = L.map("map")
 const layer = new L.StamenTileLayer("terrain")
 map.addLayer(layer)
 
 fetch(
-  "https://opendata.nicecotedazur.org/data/storage/f/2023-01-10T06:02:16.877Z/entries-shopping.json",
+  "https://static.data.gouv.fr/resources/liste-et-localisation-des-musees-de-france/20151210-174919/listeMuseesFrance.json",
   {
     headers: {
       "Content-Type": "application/json",
@@ -14,37 +18,12 @@ fetch(
     return response.json()
   })
   .then((data) => {
-    const { objetsTouristiques } = data
-    const geoJson = {
-      type: "FeatureCollection",
-      features: [],
-    }
+    map.setView([48.856614, 2.3522219], 8)
 
-    Object.values(objetsTouristiques).forEach((objet) => {
-      const { nom, localisation, presentation, type, id } = objet
-
-      geoJson.features.push({
-        id: id,
-        type: "Feature",
-        geometry: localisation.geolocalisation.geoJson,
-        properties: {
-          name: nom.libelleFr,
-          amenity: type,
-          popupContent: presentation.descriptifCourt.libelleFr,
-        },
-      })
-    })
-
-    const niceCity = {
-      latitude: 43.6961,
-      longitude: 7.27178,
-    }
-    map.setView([niceCity.latitude, niceCity.longitude], 13)
-
-    L.geoJSON(geoJson, {
-      onEachFeature: function (feature, layer) {
+    L.geoJSON(data, {
+      onEachFeature: (feature, layer) => {
         layer.bindPopup(
-          `<h1>${feature.properties.name}</h1><p>${feature.properties.popupContent}</p>`
+          `<h3>${feature.properties.name}</h3><p>${feature.properties.Adresse}</p>`
         )
       },
     }).addTo(map)
