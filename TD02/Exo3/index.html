@@ -21,7 +21,10 @@
   <h1>Exercice 3</h1>
 
   <h2>Affichage des lieux de shoppings à Nice</h2>
-  <code><a href="http://opendata.nicecotedazur.org/data/dataset/liste-des-lieux-de-shopping-de-nice-geolocalises/resource/8ebdac23-fab5-4c9c-93e0-8054643bbe9c" target="_blank">Lien vers le dataset</a></code>
+  <p>Il y a un soucis avec les CORS, il est possible d'avoir le bon résultat en installant <a
+      href="https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf"
+      target="_blank">cette extension.</a></p>
+  <code><a href="https://opendata.nicecotedazur.org/data/dataset/liste-des-lieux-de-shopping-de-nice-geolocalises/resource/8ebdac23-fab5-4c9c-93e0-8054643bbe9c" target="_blank">Lien vers le dataset</a></code>
 
   <div id="map" style="height: 500px"></div>
 
@@ -41,9 +44,11 @@
 
   <form id="coordinatesMapQuest">
     <label for="start">Adresse de départ</label>
-    <input type="text" id="startAddress" name="start" placeholder="4 rue de la liberté, 06000 Nice" value="4 rue de la liberté, 06000 Nice" required>
+    <input type="text" id="startAddress" name="start" placeholder="4 rue de la liberté, 06000 Nice"
+      value="4 rue de la liberté, 06000 Nice" required>
     <label for="end">Adresse d'arrivée</label>
-    <input type="text" id="endAddress" name="end" placeholder="Quai du Port, 13002 Marseille" value="Quai du Port, 13002 Marseille" required>
+    <input type="text" id="endAddress" name="end" placeholder="Quai du Port, 13002 Marseille"
+      value="Quai du Port, 13002 Marseille" required>
     <input type="submit" value="Afficher">
   </form>
 

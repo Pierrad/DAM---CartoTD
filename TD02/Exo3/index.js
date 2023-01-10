@@ -110,14 +110,12 @@ document
     const endAddress = document.getElementById("endAddress").value
 
     fetch(
-      `http://www.mapquestapi.com/directions/v2/route?key=tR2C6osuQcc3RoWnxDMXF6FACtNAzMl8&from=${startAddress}&to=${endAddress}`
+      `https://www.mapquestapi.com/directions/v2/route?key=tR2C6osuQcc3RoWnxDMXF6FACtNAzMl8&from=${startAddress}&to=${endAddress}`
     )
       .then((response) => {
         return response.json()
       })
       .then((data) => {
-        console.log(data)
-
         const { locations } = data.route
         const { maneuvers } = data.route.legs[0]
         const latlngs = []
