@@ -3,7 +3,7 @@ const layer = new L.StamenTileLayer("terrain")
 map.addLayer(layer)
 
 fetch(
-  "http://opendata.nicecotedazur.org/data/storage/f/2023-01-10T06:02:16.877Z/entries-shopping.json",
+  "https://opendata.nicecotedazur.org/data/storage/f/2023-01-10T06:02:16.877Z/entries-shopping.json",
   {
     headers: {
       "Content-Type": "application/json",
