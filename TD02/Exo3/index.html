@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>GeoCarto - TD02 - Exo3</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="LP DAM - GeoCarto - TD02 - Exo3" />
+  <meta name="author" content="VASSEUR Pierre-Adrien" />
+
+  <!-- Leaflet-->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+  <!-- Stamen -->
+  <script type="text/javascript" src="https://stamen-maps.a.ssl.fastly.net/js/tile.stamen.js?v1.3.0"></script>
+</head>
+
+<body>
+  <h1>Exercice 3</h1>
+
+  <h2>Affichage des lieux de shoppings à Nice</h2>
+  <code><a href="http://opendata.nicecotedazur.org/data/dataset/liste-des-lieux-de-shopping-de-nice-geolocalises/resource/8ebdac23-fab5-4c9c-93e0-8054643bbe9c" target="_blank">Lien vers le dataset</a></code>
+
+  <div id="map" style="height: 500px"></div>
+
+  <h2>Trajet d'un point A vers un point B avec MapBox</h2>
+
+  <form id="coordinates">
+    <label for="start">Point de départ</label>
+    <input type="text" id="start" name="start" placeholder="Ex: 7.266,43.703" value="7.27178,43.6961" required>
+    <label for="end">Point d'arrivée</label>
+    <input type="text" id="end" name="end" placeholder="Ex: 7.266,43.703" value="5.36978,43.296482" required>
+    <input type="submit" value="Afficher">
+  </form>
+
+  <div id="pathMap" style="height: 500px; margin: 20px 0 20px 0;"></div>
+
+  <script src="./index.js"></script>
+</body>
+
+</html>

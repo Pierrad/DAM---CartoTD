@@ -2,7 +2,7 @@ const map = L.map("map")
 const layer = new L.StamenTileLayer("terrain")
 map.addLayer(layer)
 
-navigator.geolocation.watchPosition(function (position) {
+navigator.geolocation.getCurrentPosition(function (position) {
   const { latitude, longitude, accuracy } = position.coords
 
   map.setView([latitude, longitude], 13)

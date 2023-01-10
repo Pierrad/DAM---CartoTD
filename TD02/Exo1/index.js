@@ -1,7 +1,9 @@
-navigator.geolocation.watchPosition(function (position) {
+const map = L.map("map")
+
+navigator.geolocation.getCurrentPosition(function (position) {
   const { latitude, longitude } = position.coords
 
-  const map = L.map("map").setView([latitude, longitude], 13)
+  map.setView([latitude, longitude], 13)
 
   L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
     maxZoom: 19,
