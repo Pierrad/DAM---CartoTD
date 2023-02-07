@@ -19,11 +19,11 @@
 <body>
   <a-scene embedded arjs>
     <a-marker preset="hiro">
-      <a-entity position="0 0 -1.6" scale="0.15 0.15 0.15"
+      <a-entity position="0 0 0" scale="0.15 0.15 0.15"
         gltf-model="./model.glb"></a-entity>
     </a-marker>
     <a-entity id="localizedEntity" material='color: red' geometry='primitive: box' scale="10 10 10"></a-entity>
-    <a-camera gps-new-camera='gpsMinDistance: 5'></a-camera>
+    <a-entity camera></a-entity>
   </a-scene>
   <script src="script.js"></script>
 </body>
