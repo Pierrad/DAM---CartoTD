@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>GeoCarto - TD05 - AFrame</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="LP DAM - GeoCarto - TD05 - AFrame" />
+  <meta name="author" content="VASSEUR Pierre-Adrien" />
+  <style>
+    body { margin: 0; }
+  </style>
+  <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+</head>
+
+<body>
+  <a-scene>
+    <a-box position="-1 0.5 -2.75" rotation="0 45 0" color="#4CC3D9"></a-box>
+    <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+    <a-assets>
+      <a-asset-item id="model" src="./model.glb"></a-asset-item>
+    </a-assets>
+    <a-entity gltf-model="#model" scale="0.2 0.2 0.2" position="1.25 0 -2.75"></a-entity>
+    <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+  </a-scene>
+
+</body>
+
+</html>
